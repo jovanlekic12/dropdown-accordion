@@ -7,7 +7,6 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        // Make "src" or "app" available for imports
         includePaths: [path.resolve(__dirname, "src")],
       },
     },
@@ -15,7 +14,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),
-      app: path.resolve(__dirname, "src/app"), // ✅ allows 'app/config/breakpoints'
+      app: path.resolve(__dirname, "src/app"),
     },
   },
 });

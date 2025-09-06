@@ -85,55 +85,62 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+html {
+  font-size: 62.5%;
+}
+$color-gray-alpha: #d1d1d1;
+$color-light-alpha: #f1f1f1;
+$border-radius-alpha: 4px;
+$accordion-expanded-max-height: 5rem;
+
 .AccordionDropdown {
-  border: 1px solid #d1d1d1;
-  border-radius: 4px;
+  border: 1px solid $color-gray-alpha;
+  border-radius: $border-radius-alpha;
   background-color: #fff;
-}
 
-.AccordionDropdown-header {
-  display: flex;
-  padding: 15px 20px;
-  border-bottom: 1px solid transparent;
-  justify-content: space-between;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
+  &-header {
+    display: flex;
+    padding: 15rem 20rem;
+    border-bottom: 1px solid transparent;
+    justify-content: space-between;
+    cursor: pointer;
 
-.AccordionDropdown-header:hover {
-  background-color: #f1f1f1;
-}
+    &:hover {
+      background-color: $color-light-alpha;
+    }
 
-.AccordionDropdown-header.is-expanded {
-  border-bottom: 1px solid #d1d1d1;
-  visibility: visible;
-}
+    &.is-expanded {
+      border-bottom: 1px solid $color-gray-alpha;
+      visibility: visible;
+    }
+  }
 
-.AccordionDropdown-content {
-  position: relative;
-  max-height: 0;
-  padding: 0 20px;
-  overflow: hidden;
-  visibility: hidden;
-  transition: max-height 0.3s ease-in-out;
-  overflow-x: scroll;
-}
+  &-content {
+    position: relative;
+    max-height: 0;
+    padding: 0 20rem;
+    overflow: hidden;
+    visibility: hidden;
+    transition: max-height 0.3s ease-in-out;
+    overflow-x: scroll;
 
-.AccordionDropdown-content.is-expanded {
-  max-height: 5000px;
-  visibility: visible;
-}
+    &.is-expanded {
+      max-height: $accordion-expanded-max-height;
+      visibility: visible;
+    }
+  }
 
-.AccordionDropdown-actionButton {
-  border: none;
-  background: transparent;
-  transition: opacity 0.3s, filter 0.2s ease-in-out;
-  outline: none;
-}
+  &-actionButton {
+    border: none;
+    background: transparent;
+    transition: opacity 0.3s, filter 0.2s ease-in-out;
+    outline: none;
 
-.AccordionDropdown-actionButton:disabled {
-  opacity: 0.4;
-  filter: brightness(0%);
-  pointer-events: none;
+    &:disabled {
+      opacity: 0.4;
+      filter: brightness(0%);
+      pointer-events: none;
+    }
+  }
 }
 </style>

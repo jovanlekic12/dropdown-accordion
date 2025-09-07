@@ -4,7 +4,7 @@
     :class="[
       'AccordionDropdown',
       {
-        'is-expanded': isExpanded,
+        'is-expanded': isExpanded, 
       },
     ]"
   >
@@ -88,7 +88,6 @@ export default {
 $color-gray-alpha: #d1d1d1;
 $color-light-alpha: #f1f1f1;
 $border-radius-alpha: 4px;
-$accordion-expanded-max-height: 5rem;
 
 .AccordionDropdown {
   border: 1px solid $color-gray-alpha;
@@ -122,7 +121,7 @@ $accordion-expanded-max-height: 5rem;
     overflow-x: scroll;
 
     &.is-expanded {
-      max-height: $accordion-expanded-max-height;
+      max-height: none;
       visibility: visible;
     }
   }

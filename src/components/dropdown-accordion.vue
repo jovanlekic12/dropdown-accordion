@@ -85,9 +85,6 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-html {
-  font-size: 62.5%;
-}
 $color-gray-alpha: #d1d1d1;
 $color-light-alpha: #f1f1f1;
 $border-radius-alpha: 4px;
